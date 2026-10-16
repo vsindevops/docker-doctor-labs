@@ -1,0 +1,37 @@
+# The waiting room: eight patients.
+# Start them all with:  docker compose up -d
+name: clinic
+
+services:
+  api:        # the web API
+    image: python:3.12-alpine
+    command: ["pyhton", "-m", "http.server", "8000"]
+
+  worker:     # runs background jobs with a start script
+    build: ./worker
+
+  billing:    # charges customers (it needs the payment service)
+    image: python:3.12-alpine
+    command: ["python", "-c", "raise RuntimeError('payment service is not reachable')"]
+
+  migrate:    # a one-time job that updates the database tables
+    image: python:3.12-alpine
+    command: ["python", "-c", "print('migrated 12 tables, all done')"]
+
+  parser:     # reads uploaded files with a fast library written in C
+    image: python:3.12-alpine
+    command: ["python", "-c", "import ctypes; ctypes.string_at(0)"]
+
+  report:     # builds the monthly report
+    image: python:3.12-alpine
+    mem_limit: 64m
+    command: ["python", "-c", "data = b'x' * (300 * 1024 * 1024)"]
+
+  cache:      # keeps recent results ready
+    image: python:3.12-alpine
+    command: ["python", "-c", "import time; time.sleep(100000)"]
+
+  queue:      # hands out jobs to the workers
+    image: python:3.12-alpine
+    init: true
+    command: ["python", "-c", "import time; time.sleep(100000)"]

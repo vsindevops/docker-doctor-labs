@@ -36,6 +36,7 @@ Then: **fix it, prove it, prevent it.**
 | Episode | Lab | The symptom |
 |---|---|---|
 | 1 | [ep01-exits-immediately](ep01-exits-immediately) | `docker run` prints an ID, but the app never opens, and `docker ps` is empty |
+| 2 | [ep02-exit-codes](ep02-exit-codes) | Eight services start at once. Compose shows one error, but more than one is broken |
 
 A new lab arrives with every episode.
 
