@@ -1,6 +1,6 @@
 # Lab 02 — The waiting room: eight patients, eight exit codes
 
-From **Docker Doctor, Episode 2**. Try the lab first, then watch the episode.
+From **Docker Doctor, Episode 2** on the [Systems and Signals](https://www.youtube.com/@systemsandsignals) YouTube channel. Try the lab first, then watch the episode.
 
 ## The patients
 

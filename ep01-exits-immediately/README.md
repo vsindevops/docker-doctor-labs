@@ -1,6 +1,6 @@
 # Lab 01 — The container that stops right away
 
-From **Docker Doctor, Episode 1**. Try the lab first, then watch the episode.
+From **Docker Doctor, Episode 1** on the [Systems and Signals](https://www.youtube.com/@systemsandsignals) YouTube channel. Try the lab first, then watch the episode.
 
 ## The patient
 
