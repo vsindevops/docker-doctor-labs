@@ -37,6 +37,7 @@ Then: **fix it, prove it, prevent it.**
 |---|---|---|
 | 1 | [ep01-exits-immediately](ep01-exits-immediately) | `docker run` prints an ID, but the app never opens, and `docker ps` is empty |
 | 2 | [ep02-exit-codes](ep02-exit-codes) | Eight services start at once. Compose shows one error, but more than one is broken |
+| 3 | [ep03-oomkilled](ep03-oomkilled) | Works on a laptop, dies on a server with the same limit. And a website that says `Up` while its pages fail |
 
 A new lab arrives with every episode.
 

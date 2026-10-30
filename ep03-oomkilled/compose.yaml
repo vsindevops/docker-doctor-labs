@@ -1,0 +1,16 @@
+name: ward
+
+services:
+  report:     # builds the monthly report, then exits
+    build: ./report
+    mem_limit: 64m
+
+  sessions:   # remembers every visitor
+    build: ./sessions
+    mem_limit: 64m
+
+  web:        # the clinic's website
+    build: ./web
+    mem_limit: 64m
+    ports:
+      - "8080:8000"
