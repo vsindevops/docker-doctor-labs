@@ -6,7 +6,7 @@ From **Docker Doctor, Episode 3** on the [Systems and Signals](https://www.youtu
 
 | Patient | What it does | The symptom |
 |---|---|---|
-| `report` | Builds the monthly report, then exits | Works on a laptop with a 128 MB limit, and dies on a server with the same limit |
+| `report` | Builds the monthly report, then exits | Works on a laptop with a 256 MB limit, and dies on a server with the same limit |
 | `sessions` | Remembers every visitor | You double its memory, and it still dies |
 | `web` | The clinic's website | `docker ps` says `Up`, but the report page fails |
 
