@@ -1,0 +1,39 @@
+name: frontdesk
+
+services:
+  web:        # the clinic's website
+    build: ./app
+    environment:
+      NAME: web
+    ports:
+      - "8080:8000"
+
+  booking:    # book an appointment
+    build: ./app
+    environment:
+      NAME: booking
+      HOST: 0.0.0.0
+    ports:
+      - "8081:80"
+
+  records:    # patient records
+    build: ./app
+    environment:
+      NAME: records
+      HOST: 0.0.0.0
+
+  pharmacy:   # the pharmacy
+    build: ./app
+    environment:
+      NAME: pharmacy
+      HOST: 0.0.0.0
+    ports:
+      - "8082:8000"
+
+  xray:       # x-ray results
+    build: ./app
+    environment:
+      NAME: xray
+      HOST: 0.0.0.0
+    ports:
+      - "8082:8000"
