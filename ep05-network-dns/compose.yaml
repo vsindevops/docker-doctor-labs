@@ -1,0 +1,36 @@
+# Docker Doctor, Episode 5: the clinic's switchboard.
+# Reception calls three departments. All three calls fail.
+name: switchboard
+
+services:
+  reception:  # calls every department and shows the answers
+    build: ./app
+    command: ["python", "/reception.py"]
+    environment:
+      RECORDS_URL: http://localhost:8000
+      PHARMACY_URL: http://pharmacy:8082
+      BILLING_URL: http://billing:8000
+    ports:
+      - "8080:8080"
+
+  records:    # patient records
+    build: ./app
+    environment:
+      NAME: records
+
+  pharmacy:   # the pharmacy
+    build: ./app
+    environment:
+      NAME: pharmacy
+    ports:
+      - "8082:8000"
+
+  billing:    # billing, kept on its own network
+    build: ./app
+    environment:
+      NAME: billing
+    networks:
+      - private
+
+networks:
+  private:

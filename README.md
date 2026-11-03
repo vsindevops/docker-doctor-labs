@@ -39,6 +39,7 @@ Then: **fix it, prove it, prevent it.**
 | 2 | [ep02-exit-codes](ep02-exit-codes) | Eight services start at once. Compose shows one error, but more than one is broken |
 | 3 | [ep03-oomkilled](ep03-oomkilled) | Works on a laptop, dies on a server with the same limit. And a website that says `Up` while its pages fail |
 | 4 | [ep04-port-problems](ep04-port-problems) | The containers are `Up`, the ports look right, and the browser says "This site can't be reached" |
+| 5 | [ep05-network-dns](ep05-network-dns) | Two containers on one laptop can't find each other by name. And a switchboard where every call fails |
 
 A new lab arrives with every episode.
 
