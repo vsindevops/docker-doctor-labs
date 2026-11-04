@@ -2,6 +2,8 @@
 
 Measured on Docker Desktop for Mac (Docker Engine 29.9.2, Compose 5.6.1, Apple Silicon). Where Linux is different, it says so.
 
+In the terminal blocks below, `$` marks a command, and `⋮` marks output left out (a container's long ID, or Compose's progress lines).
+
 ## Two kinds of error
 
 When one container can't talk to another, the error tells you which kind of problem you have:
@@ -48,8 +50,11 @@ nameserver 192.168.65.7
 
 ```
 $ docker stop records
+⋮
 $ docker run -d --name pharmacy -e NAME=pharmacy switchboard-app
+⋮
 $ docker start records
+⋮
 $ docker run --rm --name reception switchboard-app wget -qO- 172.17.0.2:8000
 pharmacy is open
 ```
@@ -62,6 +67,7 @@ Docker's docs: "Docker assigns container IP addresses dynamically from the netwo
 
 ```
 $ docker network create clinic
+⋮
 $ docker network connect clinic records
 $ docker run --rm --name reception --network clinic switchboard-app wget -qO- records:8000
 records is open
@@ -222,6 +228,7 @@ switchboard-billing-1     switchboard_private
 
 ```
 $ docker compose up -d reception
+⋮
 $ curl localhost:8080
 records    http://records:8000      [Errno -2] Name does not resolve
 pharmacy   http://pharmacy:8000     [Errno -2] Name does not resolve
@@ -240,6 +247,7 @@ Billing works, and the other two broke. It's the same trap again: `reception`'s 
 
 ```
 $ docker compose up -d reception
+⋮
 $ curl localhost:8080
 records    http://records:8000      records is open
 pharmacy   http://pharmacy:8000     pharmacy is open

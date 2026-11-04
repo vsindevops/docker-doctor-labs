@@ -1,0 +1,13 @@
+# Docker Doctor, Episode 6: the clinic's records app.
+name: keycard
+
+services:
+  records:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - notes:/data
+
+volumes:
+  notes:
