@@ -1,0 +1,13 @@
+# Docker Doctor, Episode 7: the clinic's notice board.
+name: noticeboard
+
+services:
+  site:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - notices:/usr/share/nginx/html/notices   # keep the notices when the container is replaced
+
+volumes:
+  notices:

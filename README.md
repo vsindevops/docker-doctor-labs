@@ -41,6 +41,7 @@ Then: **fix it, prove it, prevent it.**
 | 4 | [ep04-port-problems](ep04-port-problems) | The containers are `Up`, the ports look right, and the browser says "This site can't be reached" |
 | 5 | [ep05-network-dns](ep05-network-dns) | Two containers on one laptop can't find each other by name. And a switchboard where every call fails |
 | 6 | [ep06-permission-denied](ep06-permission-denied) | One line, `USER app`, and the app can't read its own settings, save its uploads or write to its volume |
+| 7 | [ep07-changes-dont-show](ep07-changes-dont-show) | You ship version 2, and the website keeps showing version 1. Then a rebuild updates only half of it |
 
 A new lab arrives with every episode.
 
