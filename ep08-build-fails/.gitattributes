@@ -1,0 +1,2 @@
+# keep Linux line endings on every computer, even Windows
+*.sh text eol=lf

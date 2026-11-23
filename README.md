@@ -42,6 +42,7 @@ Then: **fix it, prove it, prevent it.**
 | 5 | [ep05-network-dns](ep05-network-dns) | Two containers on one laptop can't find each other by name. And a switchboard where every call fails |
 | 6 | [ep06-permission-denied](ep06-permission-denied) | One line, `USER app`, and the app can't read its own settings, save its uploads or write to its volume |
 | 7 | [ep07-changes-dont-show](ep07-changes-dont-show) | You ship version 2, and the website keeps showing version 1. Then a rebuild updates only half of it |
+| 8 | [ep08-build-fails](ep08-build-fails) | A build that fails three times in a row, and then builds green and still won't start |
 
 A new lab arrives with every episode.
 
