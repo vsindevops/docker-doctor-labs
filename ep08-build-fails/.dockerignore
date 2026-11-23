@@ -1,0 +1,4 @@
+# send Docker only what the image needs
+*
+!main.py
+!start.sh
